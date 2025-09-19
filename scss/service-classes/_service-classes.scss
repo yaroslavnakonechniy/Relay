@@ -1,0 +1,27 @@
+
+*{
+      font-family: $roboto;
+}
+a{
+      text-decoration: none;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.relative {
+      position: relative;
+      padding-right: 10px;
+}
+
+//for menu icon in header menu
+.check-mark-menu-header::after {
+      position: absolute;
+      content: '';
+      top: 7px;
+      right: 0;
+      width: 9px;
+      height: 5px;
+      background: url('../assets/icon/check-mark/bird-link.png') center / contain no-repeat;
+}

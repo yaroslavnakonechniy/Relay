@@ -1,0 +1,41 @@
+// for size and line height
+@mixin size-height($font-size, $line-height){
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+// for button
+@mixin border-radius-bg($background){
+      border-radius: 20px;
+      border: none;
+      background: $background;
+      color: $color-for-text-green;
+}
+
+// for circle with checked icon 
+@mixin circle-checked ($background){
+      position: relative;
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      background: $background;
+      border: none;
+      border-radius: 50px;
+
+      &::before{
+            position: absolute;
+            content: '';
+            top: 7px;
+            left: 7px;
+            width: 10px;
+            height: 9px;
+            background: url('../assets/icon/check-mark/small-green-check.svg') center / contain no-repeat;
+      }
+}
+
+// for cards
+@mixin bg-align-content-end($backgraund){
+      text-align: left;
+      align-content: end;
+      background: $backgraund;
+}
