@@ -8,12 +8,12 @@
 
 //header
 .header {
+            background: $color-for-text-white;
 
 		&__container {
                   display: grid;
                   grid-template: 1fr / 0.3fr auto 0.3fr;
                   align-items: center;
-                  background: $color-for-text-white;
 		}
 
 		&__menu {
@@ -63,10 +63,13 @@
                   width: 100%;
                   height: 100%;
                   background: url('../assets/img/girl/girl-with-wheel.png') center / cover no-repeat;
-                  display: grid;
+		}     
+
+            &__girl-container{
+                                    display: grid;
                   grid-template: 1fr / 1fr 0.9fr;
                   gap: 140px;
-		}     
+            }
 
 		&__keeping {
                   padding-left:  30px;
@@ -161,16 +164,20 @@
 		&_trustpilot-visa {
                   display: flex;
                   align-items: center;
-                  margin-left: 30px;
+                  margin-left: 50px;
 		}
 
 		&__trustpilot {
-                  display: grid;
-                  grid-template: 1fr / 1fr  1fr 3fr ;
                   background: $bg-color-for-trustpilot;
+		}
+
+            &__trustpilot-container{
                   padding: 25px;
                   align-items: center;
-		}
+                  display: grid;
+                  grid-template: 1fr / 1fr  1fr 3fr ;
+                  padding-left: 90px;
+            }
 
 		&__trustpilot-fdic {
                   display: flex;
@@ -203,14 +210,22 @@
       //end trustpilot
 
       //visa
+      &__visa img{
+            width: 100%;
+            height: 100%;
+      }
       //end visa
 
       //beyong
 		&__beyoung {
+                  background: $color-for-text-white;
+		}
+
+            &__beyoung-container{
                   display: grid;
                   grid-template: 1fr 2fr / 1fr;
                   text-align: center;
-		}
+            }
 
 		&__beyong-title {
                   @include size-height(43px, 43px);
@@ -245,11 +260,14 @@
 
       //see
 		&__see {
+                  background: $color-for-text-green;
+		}
+
+            &__see-container{
                   display: grid;
                   grid-template: auto auto auto auto auto auto / auto;
-                  background: $color-for-text-green;
                   color: $color-for-text-white;
-		}
+            }
 
 		&__see-title {
                   @include size-height(44px, 43px);
@@ -310,16 +328,23 @@
       //ens see
 
       //every-detail
+      &__every img{
+            width: 100%;
+            height: 100%;
+      }
       //end every-detail
 
       //what container
 
 		&__what {
+                  background: $color-for-text-white;
+		}
+
+            &__what-container{
                   display: grid;
                   grid-template: 1fr 2fr / 1fr;
                   text-align: center;
-                  background: $color-for-text-white;
-		}
+            }
 
 		&__what-title {
                   @include size-height(46px, 43px);
@@ -382,19 +407,23 @@
       //end 
 
       //always secur
-      &__always{
-            background: $color-for-text-dark;
+      &__always img{
+            width: 100%;
+            height: 100%;
       }
       //end always secur
 
       //your money
 
 		&__money {
+                  background: $color-for-text-dark;
+		}
+
+            &__money-container{
                   display: grid;
                   grid-template: 1fr 1fr 1fr / 1fr;
-                  background: $color-for-text-dark;
                   text-align: center;
-		}
+            }
 
 		&__money-title {
                   @include size-height(40px, 36px);
@@ -433,11 +462,14 @@
 
       //kind
 		&__kind {
+                  background: $color-for-text-white;
+		}
+
+            &__kind-container{
                   display: grid;
                   grid-template: 1fr 2fr 0.2fr / 1fr;
                   text-align: center;
-                  background: $color-for-text-white;
-		}
+            }
 
 		&__kind-title {
                   @include size-height(47px, 43px);
@@ -509,11 +541,14 @@
       //ready
 
 		&__ready {
+                  background: $color-for-text-green;
+		}
+
+            &__ready-container{
                   display: grid;
                   grid-template: 1fr 1fr / 1fr;
-                  background: $color-for-text-green;
                   text-align: center;
-		}
+            }
 
 		&__ready-title {
                   @include size-height(46px, 43px);
@@ -539,11 +574,13 @@
 
 .footer {
 
-      background: $color-for-text-green;
-      color: $color-for-text-white;
-      display: grid;
-      grid-template: 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr / 1fr;
+            background: $color-for-text-green;
 
+            &-container{
+                  color: $color-for-text-white;
+                  display: grid;
+                  grid-template: 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr / 1fr;
+            }
       
 		&__menu {
                   display: grid;
