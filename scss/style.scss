@@ -95,6 +95,7 @@ $bp-xxl: 1400px;  // великі екрани
                   display: none;
 
                   @include respond($bp-md){
+                        display: block;
                         position: relative;
 
                         &::before,

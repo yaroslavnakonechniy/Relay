@@ -134,6 +134,7 @@ a {
 }
 @media (max-width: 768px) {
   .header__burger {
+    display: block;
     position: relative;
   }
   .header__burger::before, .header__burger::after,
