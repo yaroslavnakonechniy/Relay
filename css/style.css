@@ -100,6 +100,14 @@ button:active {
   padding-right: 10px;
 }
 
+.check-mark-menu-header {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px; /* місце під галочку */
+  text-decoration: none;
+  color: #000;
+}
+
 .check-mark-menu-header::after {
   position: absolute;
   content: "";
@@ -108,6 +116,15 @@ button:active {
   width: 9px;
   height: 5px;
   background: url("../assets/icon/check-mark/bird-link.png") center/contain no-repeat;
+}
+
+.check-mark-menu-header span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.check-mark-menu-header:hover span {
+  transform: scale(0.9);
 }
 
 @media (max-width: 1400px) {
