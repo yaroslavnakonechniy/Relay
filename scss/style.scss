@@ -1,10 +1,9 @@
 
 @import './reset-style/reset-style';
-@import './fonts/roboto';
-@import './color/variables-color';
+@import './color-variables/color-variables';
 @import './mixin/mixin';
 @import './color-variables/color-variables.scss';
-@import './service-classes/service-classes.scss';
+@import './service-classes/service-classes';
 
 $container-xs: 320px;
 $container-sm: 576px;
@@ -67,9 +66,6 @@ $bp-xxl: 1400px;  // великі екрани
             width: $container-xs;
       }
 }
-
-
-
 
 //header
 .header {
@@ -182,8 +178,6 @@ $bp-xxl: 1400px;  // великі екрани
                         grid-template: 1fr 0.4fr / 1fr ;
                         gap: 0px;
                   }
-
-
             }
 
 		&__keeping {
@@ -221,7 +215,6 @@ $bp-xxl: 1400px;  // великі екрани
 		}
 
 		&__keeping-button {
-                  button{
                   width: 189px;
                   height: 56px;
                   @include size-height(18px, 28px);
@@ -229,7 +222,7 @@ $bp-xxl: 1400px;  // великі екрани
                   color: $color-for-text-green;
                   text-align: center;
                   margin-bottom: 80px;
-                  }
+
 		}
 
 		&__keeping-text {
@@ -873,6 +866,10 @@ $bp-xxl: 1400px;  // великі екрани
                   @include respond($bp-lg){
                         @include size-height(14px , 16px);
                   }
+            }
+
+            &__what-list-link {
+                  color: $color-for-text-white;
             }
 
 		&__line {
