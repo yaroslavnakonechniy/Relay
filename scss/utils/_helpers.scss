@@ -1,40 +1,5 @@
 
-@import '../fonts/roboto';
-
-body{
-      font-family: $roboto;
-}
-
-a{
-      text-decoration: none;
-      cursor: pointer;
-      display: inline-block; /* обов’язково для transform */
-      transition: transform 0.3s ease;
-}
-
-a:hover{
-      transform: scale(0.9);
-}
-
-button{
-      transition: background 0.6s ease, transform 2.5s ease;
-      transition: transform 0.2s ease;
-}
-
-button:hover {
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-      background: $color-for-text-green;
-      color: $bg-color-for-button;
-}
-
-button:active {
-      transform: scale(0.9);
-}
-
-.container{
-    width: 1200px;
-    margin: 0 auto;
-}
+@use '../base/variables' as *;
 
 .relative {
       position: relative;

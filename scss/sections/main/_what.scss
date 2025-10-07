@@ -1,0 +1,86 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+      //what container
+
+		&__what {
+                  background: $color-for-text-white;
+		}
+
+            &__what-container{
+                  display: grid;
+                  grid-template: 1fr 2fr / 1fr;
+                  text-align: center;
+            }
+
+		&__what-title {
+                  @include size-height(46px, 43px);
+                  text-transform: uppercase;
+                  color: $color-for-text-green;
+                  margin-top: 97px;
+                  margin-bottom: 100px;
+		}
+
+		&__what-columns {
+                  display: grid;
+                  grid-template: 1fr / 1fr 1fr 1fr 1fr;
+                  place-content: end;   
+
+                  
+                  @include respond($bp-md){
+                        grid-template: 1fr  1fr / 1fr 1fr;
+                  }
+
+                  @include respond($bp-sm){
+                        grid-template: 1fr  1fr  1fr  1fr / 1fr;
+                  }
+		}
+
+		&__what-you-title, &__what-delegate-title {
+                  @include size-height(28px, 28px);
+                  color: $color-for-text-green;
+                  margin-bottom: 60px;
+                  margin-left: 25px;
+		}
+
+            &__what-bookkeeping-title, &__what-tax-title {
+                  @include size-height(28px, 28px);
+                  color: $color-for-text-white;
+                  margin-bottom: 60px;
+                  margin-left: 25px;
+		}
+
+		&__what-you-text, &__what-delegate-text {
+                  @include size-height(16px, 24pz);
+                  margin-bottom: 59px;
+                  margin-left: 25px;
+		}
+
+            &__what-bookkeeping-text, &__what-tax-text {
+                  @include size-height(16px, 24pz);
+                  color: $color-for-text-white;
+                  margin-bottom: 59px;
+                  margin-left: 25px;
+                  align-items: start;
+		}
+
+            &__what-you {
+                  @include bg-align-content-end(url('../assets/img/what/what-you.png') center / cover no-repeat);
+		}
+
+		&__what-bookkeeping {
+                  @include bg-align-content-end(url('../assets/img/what/booking.png') center / cover no-repeat);
+		}
+
+		&__what-delegate {
+                  @include bg-align-content-end(url('../assets/img/what/delegate.png') center / cover no-repeat);
+		}
+
+		&__what-tax {
+                  @include bg-align-content-end(url('../assets/img/what/tax.png') center / cover no-repeat);
+		}
+
+      //end 
+}
