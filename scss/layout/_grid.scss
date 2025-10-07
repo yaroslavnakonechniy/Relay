@@ -1,0 +1,39 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+@include respond($bp-xxl){
+      .container {
+            width: $container-xl;
+      }
+}
+
+@include respond($bp-xl){
+      .container {
+            width: $container-lg;
+      }
+}
+
+@include respond($bp-lg){
+      .container {
+            width: $container-md;
+      }
+}
+
+@include respond($bp-md){
+      .container {
+            width: $container-sm;
+      }
+}
+
+@include respond($bp-sm){
+      .container {
+            width: $container-xs;
+      }
+}

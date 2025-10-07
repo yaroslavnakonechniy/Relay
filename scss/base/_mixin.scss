@@ -1,3 +1,8 @@
+
+@use '../base/variables' as *;
+
+
+
 // for size and line height
 @mixin size-height($font-size, $line-height){
     font-size: $font-size;
@@ -38,4 +43,22 @@
       text-align: left;
       align-content: end;
       background: $backgraund;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == $bp-sm {
+    @media (max-width: #{$bp-sm}) { @content; }
+  }
+  @else if $breakpoint == $bp-md {
+    @media (max-width: #{$bp-md}) { @content; }
+  }
+  @else if $breakpoint == $bp-lg {
+    @media (max-width: #{$bp-lg}) { @content; }
+  }
+  @else if $breakpoint == $bp-xl {
+    @media (max-width: #{$bp-xl}) { @content; }
+  }
+  @else if $breakpoint == $bp-xxl {
+    @media (max-width: #{$bp-xxl}) { @content; }
+  }
 }

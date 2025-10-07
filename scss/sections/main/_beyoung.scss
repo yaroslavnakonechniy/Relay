@@ -1,0 +1,52 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+      //beyong
+		&__beyoung {
+                  background: $color-for-text-white;
+		}
+
+            &__beyoung-container{
+                  display: grid;
+                  grid-template: 1fr 2fr / 1fr;
+                  text-align: center;
+            }
+
+		&__beyong-title {
+                  @include size-height(43px, 43px);
+                  text-transform: uppercase;
+                  color: $color-for-text-green;
+                  margin-top: 97px;
+                  margin-bottom: 47px;
+		}
+
+		&__beyoung-cards {
+                  display: grid;
+                  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+                  place-items: center;
+                  margin-bottom: 178px;
+
+                  @include respond($bp-sm){
+                        grid-template: 1fr 1fr 1fr 1fr 1fr 1fr   / 1fr;
+                        gap: 20px;
+                        margin-bottom: 30px;
+                  }
+		}
+
+		&__beyoung-card {
+                  padding: 0 20px;
+                  place-items: center;
+		}
+
+		&__beyoung-card-circle {
+                  @include circle-checked($bg-color-for-circle);
+                  margin-bottom: 10px;
+		}
+
+		&__beyoung-card-text {
+                  @include size-height(16px, 20px);
+		}
+      //end beyong    
+}

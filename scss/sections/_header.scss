@@ -1,0 +1,91 @@
+
+@use '../base/variables' as *;
+@use '../base/mixin' as *;
+
+.header {
+        background: $color-for-text-white;
+
+		&__container {
+                  display: grid;
+                  grid-template: 1fr / 0.3fr auto 0.3fr;
+                  align-items: center;
+		}
+
+		&__menu {
+                  display: grid;
+                  grid-template: 1fr / auto 1fr ;
+
+                  
+                  @include respond($bp-md){
+                        display: none;
+                  }
+		}
+
+            &__burger{
+                  display: none;
+
+                  @include respond($bp-md){
+                        display: block;
+                        position: relative;
+
+                        &::before,
+                        &::after, 
+                        span{
+                              position: absolute;
+                              content: '';
+                              top: 0;
+                              left: 0;
+                              width: 40px;
+                              height: 2px;
+                              background: $color-for-text-green;
+                        };
+
+                        &::after{
+                              top: -15px;
+
+                        }
+                        &::before{
+                              top: 15px;
+                        }
+                  }
+            }
+
+		&__list {
+                  display: grid;
+                  grid-template: 1fr / auto auto auto auto auto;
+                  gap: 24px;
+		}
+
+            &__link{
+                  color: $color-for-text-dark;
+                  margin-right: 5px;
+            }
+
+            &__logo{
+                width: 85px;
+                height: 64px;
+                  margin-right: 52px;
+                  margin-left: 15px;
+
+                  @include respond($bp-xl) {
+                        margin-right: 10px;
+                  }
+            }
+
+		&__buttons {
+                  display: grid;
+                  grid-template: 1fr / 1fr 1fr;
+                  align-items: center;
+                  margin-right: 15px;
+		}
+
+		&__login {
+                  width: 48px;
+		}
+
+		&__sing-up {
+                  width: 103px;
+                  height: 44px;
+                  @include border-radius-bg($bg-color-for-button);
+		}
+}

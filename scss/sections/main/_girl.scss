@@ -1,0 +1,136 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main {
+            
+      //girl
+		&__girl {
+                  background: url('../assets/img/girl/girl-with-wheel.png') center / cover no-repeat;
+		}     
+
+            &__girl-container{
+                  display: grid;
+                  grid-template: 1fr / 1fr 0.9fr;
+                  gap: 140px;
+
+                  @include respond($bp-xl){
+                        grid-template: 1fr / 1fr 0.6fr;
+                        gap: 0px;
+                  }
+
+                  @include respond($bp-sm){
+                        grid-template: 1fr 0.4fr / 1fr ;
+                        gap: 0px;
+                  }
+            }
+
+		&__keeping {
+                  padding-left:  30px;
+
+                  @include respond($bp-sm){
+                        padding: 0;
+                  }
+		}
+
+		&__keeping-welcome {
+                  margin-top: 116px;
+                  margin-bottom: 17px;
+		}
+
+		&__welcom-sabtitle {
+                  @include size-height(24px, 28px);
+                  color: $color-for-text-white;
+		}
+
+		&__keeping-title {
+                  @include size-height(64px, 54px);
+                  text-transform: uppercase;
+                  color: $color-for-text-white;
+                  margin-bottom: 20px;
+                  font-weight: 700;
+                  font-weight: bold;
+                  font-family: $roboto;
+		}
+
+		&__keeping-ralays {
+                  @include size-height(16px, 24px);
+                  color: $color-for-text-white;
+                  margin-bottom: 44px;
+		}
+
+		&__keeping-button {
+                  width: 189px;
+                  height: 56px;
+                  @include size-height(18px, 28px);
+                  @include border-radius-bg($bg-color-for-button);
+                  color: $color-for-text-green;
+                  text-align: center;
+                  margin-bottom: 80px;
+
+		}
+
+		&__keeping-text {
+                  @include size-height(12px, 14px);
+                  color: $color-for-text-white;
+                  margin-bottom: 8px;
+		}
+
+		&__bloks {
+                  display: grid;
+                  grid-template: 1fr / 1fr 1fr;
+                  align-items: end;
+
+                  @include respond($bp-xl){
+                        grid-template: 7fr 1fr / 1fr;
+                  }
+
+                  @include respond($bp-lg){
+                        grid-template: 5fr 1fr / 1fr;
+
+                  }
+
+                  @include respond($bp-sm){
+                        align-items: start;
+                        grid-template:  0.3fr 0.3fr / 0.9fr;
+                        
+                        place-content: center;
+
+                  }
+		}
+
+		&__bloks-busnisses {
+                  background: $color-for-text-green;
+                  padding: 20px 0 0 20px;
+		}
+
+            &__bloks-busnisses-title{
+                  @include size-height(19px, 26px);
+                  color: $bg-color-for-button;
+                  margin-bottom: 8px;
+            }
+
+		&__bloks-accountants {
+                  background: $bg-color-for-button;
+                  padding: 20px 0 0 20px;
+		}
+
+            &__bloks-accountants-title{
+                  @include size-height(19px, 26px);
+                  color: $color-for-text-green;
+                  padding-bottom: 8px;
+            }
+
+            &__bloks-busnisses-text{
+                  @include size-height(15px, 20px);
+                  color: $color-for-text-white;
+                  margin-bottom: 20px;
+            }
+
+            &__bloks-accountants-text{
+                  @include size-height(15px, 20px);
+                  color: $color-for-text-dark;
+                  margin-bottom: 14px;;
+            }
+      //end girl
+}

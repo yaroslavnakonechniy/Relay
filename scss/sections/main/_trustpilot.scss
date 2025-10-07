@@ -1,0 +1,77 @@
+
+@use '../../base/variables' as *;
+@use '../../base/mixin' as *;
+
+.main{
+          //trustpilot
+		&_trustpilot-visa {
+                  display: flex;
+                  align-items: center;
+                  margin-left: 50px;
+		}
+
+		&__trustpilot {
+                  background: $bg-color-for-trustpilot;
+		}
+
+            &__trustpilot-container{
+                  
+                  align-items: center;
+                  display: grid;
+                  grid-template: 1fr / 1fr  1fr 3fr;
+                  
+
+                  @include respond($bp-xxl){
+                        grid-template: 1fr / 1fr 2fr 2fr;
+                  }
+
+                  @include respond($bp-sm){
+                        grid-template: 1fr 1fr 1fr / 1fr ;
+                        gap: 0px;
+                        place-items: center;
+                  }
+            }
+
+            &__trustpilot-name{
+                  padding-left: 30px;
+                  @include respond($bp-xxl){
+                        
+                  }
+            }
+
+            &__trustpilot-visa{
+                  display: flex;
+                  align-items: center;
+
+            }
+
+		&__trustpilot-fdic {
+                  display: flex;
+                  align-items: center;
+		}
+
+            &__trustpilot-fdic-circle{
+                  @include circle-checked($bg-color-for-button);
+            }
+
+            &__trustpilot-visa-circle{
+                  position: relative;
+                  margin-right: 10px;
+                  width: 40px;
+                  height: 40px;
+                  background: $bg-color-for-button;
+                  border: none;
+                  border-radius: 50px;
+
+                  &::before{
+                        position: absolute;
+                        content: '';
+                        top: 12px;
+                        left: 12px;
+                        width: 15px;
+                        height: 12px;
+                        background: url('../assets/icon/check-mark/small-green-check.svg') center / contain no-repeat;
+                  }
+            }
+      //end trustpilot
+}

@@ -53,13 +53,6 @@ table {
   border-spacing: 0;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -90,68 +83,11 @@ button:active {
   transform: scale(0.9);
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
+img {
+  width: 100%;
+  height: 100%;
 }
 
-.relative {
-  position: relative;
-  padding-right: 10px;
-}
-
-.check-mark-menu-header {
-  position: relative;
-  display: inline-block;
-  padding-right: 20px; /* місце під галочку */
-  text-decoration: none;
-  color: #000;
-}
-
-.check-mark-menu-header::after {
-  position: absolute;
-  content: "";
-  top: 7px;
-  right: 0;
-  width: 9px;
-  height: 5px;
-  background: url("../assets/icon/check-mark/bird-link.png") center/contain no-repeat;
-}
-
-.check-mark-menu-header span {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.check-mark-menu-header:hover span {
-  transform: scale(0.9);
-}
-
-@media (max-width: 1400px) {
-  .container {
-    width: 1140px;
-  }
-}
-@media (max-width: 1200px) {
-  .container {
-    width: 960px;
-  }
-}
-@media (max-width: 992px) {
-  .container {
-    width: 768px;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    width: 576px;
-  }
-}
-@media (max-width: 576px) {
-  .container {
-    width: 320px;
-  }
-}
 .header {
   background: #F1ECDA;
 }
@@ -204,6 +140,8 @@ button:active {
   margin-right: 5px;
 }
 .header__logo {
+  width: 85px;
+  height: 64px;
   margin-right: 52px;
   margin-left: 15px;
 }
@@ -230,9 +168,155 @@ button:active {
   color: #004822;
 }
 
+.footer {
+  background: #004822;
+}
+.footer-container {
+  color: #F1ECDA;
+  display: grid;
+  grid-template: 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr/1fr;
+}
+.footer__menu {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .footer__menu {
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .footer__menu {
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
+    text-align: center;
+  }
+}
+.footer__logo {
+  margin-left: 30px;
+}
+.footer__what-nav h5, .footer__resourses-nav h5, .footer__acountants-nav h5, .footer__company-nav h5, .footer__legal-nav h5 {
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 14px;
+}
+@media (max-width: 992px) {
+  .footer__what-nav h5, .footer__resourses-nav h5, .footer__acountants-nav h5, .footer__company-nav h5, .footer__legal-nav h5 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+.footer__what-list, .footer__resourses-list, .footer__acountants-list, .footer__company-list, .footer__legal-list {
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 14px;
+}
+@media (max-width: 992px) {
+  .footer__what-list, .footer__resourses-list, .footer__acountants-list, .footer__company-list, .footer__legal-list {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.footer__what-list-link {
+  color: #F1ECDA;
+}
+.footer__line {
+  width: 90%;
+  height: 2px;
+  background: #F1ECDA;
+  place-self: center;
+  margin-bottom: 24px;
+}
+.footer__social-icons a {
+  margin-left: 50px;
+  margin-bottom: 19px;
+}
+.footer__social-icons a:not(:first-child) {
+  margin-left: 20px;
+}
+.footer__raley {
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.footer__app-store a {
+  margin-left: 50px;
+  margin-bottom: 54px;
+}
+.footer__app-store a:not(:first-child) {
+  margin-left: 20px;
+}
+.footer__financial {
+  font-size: 9px;
+  line-height: 25px;
+  margin-left: 50px;
+  margin-bottom: 34px;
+}
+.footer__payment {
+  font-size: 14px;
+  line-height: 25px;
+  margin: 20px 20px 20px 50px;
+}
+
+.main__beyoung {
+  background: #F1ECDA;
+}
+.main__beyoung-container {
+  display: grid;
+  grid-template: 1fr 2fr/1fr;
+  text-align: center;
+}
+.main__beyong-title {
+  font-size: 43px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #004822;
+  margin-top: 97px;
+  margin-bottom: 47px;
+}
+.main__beyoung-cards {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr 1fr;
+  place-items: center;
+  margin-bottom: 178px;
+}
+@media (max-width: 576px) {
+  .main__beyoung-cards {
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+}
+.main__beyoung-card {
+  padding: 0 20px;
+  place-items: center;
+}
+.main__beyoung-card-circle {
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #E6B6AF;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+.main__beyoung-card-circle::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 9px;
+  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
+}
+.main__beyoung-card-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .main__girl {
-  width: 100%;
-  height: 100%;
   background: url("../assets/img/girl/girl-with-wheel.png") center/cover no-repeat;
 }
 .main__girl-container {
@@ -358,375 +442,7 @@ button:active {
   color: #25201F;
   margin-bottom: 14px;
 }
-.main_trustpilot-visa {
-  display: flex;
-  align-items: center;
-  margin-left: 50px;
-}
-.main__trustpilot {
-  background: #25201F;
-}
-.main__trustpilot-container {
-  align-items: center;
-  display: grid;
-  grid-template: 1fr/1fr 1fr 3fr;
-}
-@media (max-width: 1400px) {
-  .main__trustpilot-container {
-    grid-template: 1fr/1fr 2fr 2fr;
-  }
-}
-@media (max-width: 576px) {
-  .main__trustpilot-container {
-    grid-template: 1fr 1fr 1fr/1fr;
-    gap: 0px;
-    place-items: center;
-  }
-}
-.main__trustpilot-name {
-  padding-left: 30px;
-}
-.main__trustpilot-visa {
-  display: flex;
-  align-items: center;
-}
-.main__trustpilot-fdic {
-  display: flex;
-  align-items: center;
-}
-.main__trustpilot-fdic-circle {
-  position: relative;
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  background: #D5E27B;
-  border: none;
-  border-radius: 50px;
-}
-.main__trustpilot-fdic-circle::before {
-  position: absolute;
-  content: "";
-  top: 7px;
-  left: 7px;
-  width: 10px;
-  height: 9px;
-  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
-}
-.main__trustpilot-visa-circle {
-  position: relative;
-  margin-right: 10px;
-  width: 40px;
-  height: 40px;
-  background: #D5E27B;
-  border: none;
-  border-radius: 50px;
-}
-.main__trustpilot-visa-circle::before {
-  position: absolute;
-  content: "";
-  top: 12px;
-  left: 12px;
-  width: 15px;
-  height: 12px;
-  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
-}
-.main__visa img {
-  width: 100%;
-  height: 100%;
-}
-.main__beyoung {
-  background: #F1ECDA;
-}
-.main__beyoung-container {
-  display: grid;
-  grid-template: 1fr 2fr/1fr;
-  text-align: center;
-}
-.main__beyong-title {
-  font-size: 43px;
-  line-height: 43px;
-  text-transform: uppercase;
-  color: #004822;
-  margin-top: 97px;
-  margin-bottom: 47px;
-}
-.main__beyoung-cards {
-  display: grid;
-  grid-template: 1fr 1fr/1fr 1fr 1fr;
-  place-items: center;
-  margin-bottom: 178px;
-}
-@media (max-width: 576px) {
-  .main__beyoung-cards {
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-}
-.main__beyoung-card {
-  padding: 0 20px;
-  place-items: center;
-}
-.main__beyoung-card-circle {
-  position: relative;
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  background: #E6B6AF;
-  border: none;
-  border-radius: 50px;
-  margin-bottom: 10px;
-}
-.main__beyoung-card-circle::before {
-  position: absolute;
-  content: "";
-  top: 7px;
-  left: 7px;
-  width: 10px;
-  height: 9px;
-  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
-}
-.main__beyoung-card-text {
-  font-size: 16px;
-  line-height: 20px;
-}
-.main__see {
-  background: #004822;
-}
-.main__see-container {
-  display: grid;
-  grid-template: auto auto auto auto auto auto/auto;
-  color: #F1ECDA;
-}
-@media (max-width: 576px) {
-  .main__see-container {
-    grid-template: auto auto auto auto auto auto/1fr;
-  }
-}
-.main__see-title {
-  font-size: 44px;
-  line-height: 43px;
-  text-transform: uppercase;
-  color: #D5E27B;
-  margin-top: 77px;
-  margin-bottom: 44px;
-  text-align: center;
-}
-.main__see-description {
-  font-size: 18px;
-  line-height: 25px;
-  text-align: center;
-  margin-bottom: 49px;
-}
-.main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
-  display: grid;
-  grid-template: 1fr/1fr 1fr;
-  align-items: center;
-  position: relative;
-  padding: 50px;
-}
-.main__see-get-icome::before, .main__see-earmark-icome::before, .main__see-save-icome::before, .main__see-feel-icome::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: #F1ECDA;
-}
-@media (max-width: 1200px) {
-  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
-    padding: 0;
-  }
-}
-@media (max-width: 768px) {
-  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
-    grid-template: 1fr 1fr/1fr;
-  }
-}
-@media (max-width: 576px) {
-  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
-    grid-template: 1fr 1fr/1fr;
-  }
-}
-.main__see-get-text, .main__see-earmark-text, .main__see-save-text, .main__see-feel-text {
-  display: grid;
-  grid-template: 1fr/2fr 3fr;
-}
-@media (max-width: 576px) {
-  .main__see-get-text, .main__see-earmark-text, .main__see-save-text, .main__see-feel-text {
-    grid-template: 1fr 1fr/1fr;
-  }
-}
-.main__see-get-image img, .main__see-earmark-image img, .main__see-save-image img, .main__see-feel-image img {
-  width: 100%;
-}
-.main__see-get-title, .main__see-earmark-title, .main__see-save-title, .main__see-feel-title {
-  font-size: 38px;
-  line-height: 34px;
-  margin-bottom: 21px;
-}
-.main__see-get-upper-text, .main__see-earmark-upper-text, .main__see-save-upper-text, .main__see-feel-upper-text {
-  font-size: 16px;
-  line-height: 24px;
-}
-.main__see-get-number, .main__see-earmark-number, .main__see-save-number, .main__see-feel-number {
-  font-size: 30px;
-  line-height: 20px;
-  width: 60px;
-  height: 60px;
-  border: 2px solid #D5E27B;
-  text-align: center;
-  place-content: center;
-  margin-left: 100px;
-}
-@media (max-width: 992px) {
-  .main__see-get-number, .main__see-earmark-number, .main__see-save-number, .main__see-feel-number {
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-}
-.main__every img {
-  width: 100%;
-  height: 100%;
-}
-.main__what {
-  background: #F1ECDA;
-}
-.main__what-container {
-  display: grid;
-  grid-template: 1fr 2fr/1fr;
-  text-align: center;
-}
-.main__what-title {
-  font-size: 46px;
-  line-height: 43px;
-  text-transform: uppercase;
-  color: #004822;
-  margin-top: 97px;
-  margin-bottom: 100px;
-}
-.main__what-columns {
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr 1fr;
-  place-content: end;
-}
-@media (max-width: 768px) {
-  .main__what-columns {
-    grid-template: 1fr 1fr/1fr 1fr;
-  }
-}
-@media (max-width: 576px) {
-  .main__what-columns {
-    grid-template: 1fr 1fr 1fr 1fr/1fr;
-  }
-}
-.main__what-you-title, .main__what-delegate-title {
-  font-size: 28px;
-  line-height: 28px;
-  color: #004822;
-  margin-bottom: 60px;
-  margin-left: 25px;
-}
-.main__what-bookkeeping-title, .main__what-tax-title {
-  font-size: 28px;
-  line-height: 28px;
-  color: #F1ECDA;
-  margin-bottom: 60px;
-  margin-left: 25px;
-}
-.main__what-you-text, .main__what-delegate-text {
-  font-size: 16px;
-  line-height: 24pz;
-  margin-bottom: 59px;
-  margin-left: 25px;
-}
-.main__what-bookkeeping-text, .main__what-tax-text {
-  font-size: 16px;
-  line-height: 24pz;
-  color: #F1ECDA;
-  margin-bottom: 59px;
-  margin-left: 25px;
-  align-items: start;
-}
-.main__what-you {
-  text-align: left;
-  align-content: end;
-  background: url("../assets/img/what/what-you.png") center/cover no-repeat;
-}
-.main__what-bookkeeping {
-  text-align: left;
-  align-content: end;
-  background: url("../assets/img/what/booking.png") center/cover no-repeat;
-}
-.main__what-delegate {
-  text-align: left;
-  align-content: end;
-  background: url("../assets/img/what/delegate.png") center/cover no-repeat;
-}
-.main__what-tax {
-  text-align: left;
-  align-content: end;
-  background: url("../assets/img/what/tax.png") center/cover no-repeat;
-}
-.main__always img {
-  width: 100%;
-  height: 100%;
-}
-.main__money {
-  background: #25201F;
-}
-.main__money-container {
-  display: grid;
-  grid-template: 1fr 1fr 1fr/1fr;
-  text-align: center;
-}
-.main__money-title {
-  font-size: 40px;
-  line-height: 36px;
-  color: #D5E27B;
-  margin-top: 78px;
-  margin-bottom: 43px;
-}
-.main__money-text {
-  font-size: 24px;
-  line-height: 31px;
-  color: #F1ECDA;
-  margin-bottom: 48px;
-}
-.main__money-options {
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr;
-  place-items: center;
-  margin-bottom: 120px;
-}
-.main__money-option {
-  place-items: center;
-}
-.main__money-option-circle {
-  position: relative;
-  margin-right: 10px;
-  width: 25px;
-  height: 25px;
-  background: #D5E27B;
-  border: none;
-  border-radius: 50px;
-  margin-bottom: 19px;
-}
-.main__money-option-circle::before {
-  position: absolute;
-  content: "";
-  top: 7px;
-  left: 7px;
-  width: 10px;
-  height: 9px;
-  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
-}
-.main__money-option-text {
-  font-size: 16px;
-  line-height: 20px;
-  color: #F1ECDA;
-}
+
 .main__kind {
   background: #F1ECDA;
 }
@@ -847,6 +563,62 @@ button:active {
   background: #5A530C;
   justify-self: center;
 }
+
+.main__money {
+  background: #25201F;
+}
+.main__money-container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr/1fr;
+  text-align: center;
+}
+.main__money-title {
+  font-size: 40px;
+  line-height: 36px;
+  color: #D5E27B;
+  margin-top: 78px;
+  margin-bottom: 43px;
+}
+.main__money-text {
+  font-size: 24px;
+  line-height: 31px;
+  color: #F1ECDA;
+  margin-bottom: 48px;
+}
+.main__money-options {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr;
+  place-items: center;
+  margin-bottom: 120px;
+}
+.main__money-option {
+  place-items: center;
+}
+.main__money-option-circle {
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #D5E27B;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 19px;
+}
+.main__money-option-circle::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 9px;
+  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
+}
+.main__money-option-text {
+  font-size: 16px;
+  line-height: 20px;
+  color: #F1ECDA;
+}
+
 .main__ready {
   background: #004822;
 }
@@ -876,93 +648,315 @@ button:active {
   place-self: center;
 }
 
-.footer {
+.main__see {
   background: #004822;
 }
-.footer-container {
-  color: #F1ECDA;
+.main__see-container {
   display: grid;
-  grid-template: 3fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr/1fr;
-}
-.footer__menu {
-  display: grid;
-  grid-template: 1fr/1fr 1fr 1fr 1fr 1fr 1fr;
-  padding: 30px;
-}
-@media (max-width: 768px) {
-  .footer__menu {
-    grid-template: 1fr 1fr/1fr 1fr 1fr;
-  }
-}
-@media (max-width: 768px) {
-  .footer__menu {
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr/1fr;
-    text-align: center;
-  }
-}
-.footer__logo {
-  margin-left: 30px;
-}
-.footer__what-nav h5, .footer__resourses-nav h5, .footer__acountants-nav h5, .footer__company-nav h5, .footer__legal-nav h5 {
-  font-size: 20px;
-  line-height: 24px;
-  margin-bottom: 14px;
-}
-@media (max-width: 992px) {
-  .footer__what-nav h5, .footer__resourses-nav h5, .footer__acountants-nav h5, .footer__company-nav h5, .footer__legal-nav h5 {
-    font-size: 16px;
-    line-height: 18px;
-  }
-}
-.footer__what-list, .footer__resourses-list, .footer__acountants-list, .footer__company-list, .footer__legal-list {
-  font-size: 16px;
-  line-height: 28px;
-  margin-bottom: 14px;
-}
-@media (max-width: 992px) {
-  .footer__what-list, .footer__resourses-list, .footer__acountants-list, .footer__company-list, .footer__legal-list {
-    font-size: 14px;
-    line-height: 16px;
-  }
-}
-.footer__what-list-link {
+  grid-template: auto auto auto auto auto auto/auto;
   color: #F1ECDA;
 }
-.footer__line {
-  width: 90%;
-  height: 2px;
+@media (max-width: 576px) {
+  .main__see-container {
+    grid-template: auto auto auto auto auto auto/1fr;
+  }
+}
+.main__see-title {
+  font-size: 44px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #D5E27B;
+  margin-top: 77px;
+  margin-bottom: 44px;
+  text-align: center;
+}
+.main__see-description {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin-bottom: 49px;
+}
+.main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
+  display: grid;
+  grid-template: 1fr/1fr 1fr;
+  align-items: center;
+  position: relative;
+  padding: 50px;
+}
+.main__see-get-icome::before, .main__see-earmark-icome::before, .main__see-save-icome::before, .main__see-feel-icome::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
   background: #F1ECDA;
-  place-self: center;
-  margin-bottom: 24px;
 }
-.footer__social-icons a {
-  margin-left: 50px;
-  margin-bottom: 19px;
+@media (max-width: 1200px) {
+  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
+    padding: 0;
+  }
 }
-.footer__social-icons a:not(:first-child) {
-  margin-left: 20px;
+@media (max-width: 768px) {
+  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
+    grid-template: 1fr 1fr/1fr;
+  }
 }
-.footer__raley {
+@media (max-width: 576px) {
+  .main__see-get-icome, .main__see-earmark-icome, .main__see-save-icome, .main__see-feel-icome {
+    grid-template: 1fr 1fr/1fr;
+  }
+}
+.main__see-get-text, .main__see-earmark-text, .main__see-save-text, .main__see-feel-text {
+  display: grid;
+  grid-template: 1fr/2fr 3fr;
+}
+@media (max-width: 576px) {
+  .main__see-get-text, .main__see-earmark-text, .main__see-save-text, .main__see-feel-text {
+    grid-template: 1fr 1fr/1fr;
+  }
+}
+.main__see-get-image img, .main__see-earmark-image img, .main__see-save-image img, .main__see-feel-image img {
+  width: 100%;
+}
+.main__see-get-title, .main__see-earmark-title, .main__see-save-title, .main__see-feel-title {
+  font-size: 38px;
+  line-height: 34px;
+  margin-bottom: 21px;
+}
+.main__see-get-upper-text, .main__see-earmark-upper-text, .main__see-save-upper-text, .main__see-feel-upper-text {
   font-size: 16px;
+  line-height: 24px;
+}
+.main__see-get-number, .main__see-earmark-number, .main__see-save-number, .main__see-feel-number {
+  font-size: 30px;
   line-height: 20px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #D5E27B;
+  text-align: center;
+  place-content: center;
+  margin-left: 100px;
+}
+@media (max-width: 992px) {
+  .main__see-get-number, .main__see-earmark-number, .main__see-save-number, .main__see-feel-number {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+
+.main_trustpilot-visa {
+  display: flex;
+  align-items: center;
   margin-left: 50px;
-  margin-bottom: 20px;
 }
-.footer__app-store a {
-  margin-left: 50px;
-  margin-bottom: 54px;
+.main__trustpilot {
+  background: #25201F;
 }
-.footer__app-store a:not(:first-child) {
-  margin-left: 20px;
+.main__trustpilot-container {
+  align-items: center;
+  display: grid;
+  grid-template: 1fr/1fr 1fr 3fr;
 }
-.footer__financial {
-  font-size: 9px;
-  line-height: 25px;
-  margin-left: 50px;
-  margin-bottom: 34px;
+@media (max-width: 1400px) {
+  .main__trustpilot-container {
+    grid-template: 1fr/1fr 2fr 2fr;
+  }
 }
-.footer__payment {
-  font-size: 14px;
-  line-height: 25px;
-  margin: 20px 20px 20px 50px;
-}/*# sourceMappingURL=style.css.map */
+@media (max-width: 576px) {
+  .main__trustpilot-container {
+    grid-template: 1fr 1fr 1fr/1fr;
+    gap: 0px;
+    place-items: center;
+  }
+}
+.main__trustpilot-name {
+  padding-left: 30px;
+}
+.main__trustpilot-visa {
+  display: flex;
+  align-items: center;
+}
+.main__trustpilot-fdic {
+  display: flex;
+  align-items: center;
+}
+.main__trustpilot-fdic-circle {
+  position: relative;
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+  background: #D5E27B;
+  border: none;
+  border-radius: 50px;
+}
+.main__trustpilot-fdic-circle::before {
+  position: absolute;
+  content: "";
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 9px;
+  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
+}
+.main__trustpilot-visa-circle {
+  position: relative;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background: #D5E27B;
+  border: none;
+  border-radius: 50px;
+}
+.main__trustpilot-visa-circle::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: 12px;
+  width: 15px;
+  height: 12px;
+  background: url("../assets/icon/check-mark/small-green-check.svg") center/contain no-repeat;
+}
+
+.main__what {
+  background: #F1ECDA;
+}
+.main__what-container {
+  display: grid;
+  grid-template: 1fr 2fr/1fr;
+  text-align: center;
+}
+.main__what-title {
+  font-size: 46px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #004822;
+  margin-top: 97px;
+  margin-bottom: 100px;
+}
+.main__what-columns {
+  display: grid;
+  grid-template: 1fr/1fr 1fr 1fr 1fr;
+  place-content: end;
+}
+@media (max-width: 768px) {
+  .main__what-columns {
+    grid-template: 1fr 1fr/1fr 1fr;
+  }
+}
+@media (max-width: 576px) {
+  .main__what-columns {
+    grid-template: 1fr 1fr 1fr 1fr/1fr;
+  }
+}
+.main__what-you-title, .main__what-delegate-title {
+  font-size: 28px;
+  line-height: 28px;
+  color: #004822;
+  margin-bottom: 60px;
+  margin-left: 25px;
+}
+.main__what-bookkeeping-title, .main__what-tax-title {
+  font-size: 28px;
+  line-height: 28px;
+  color: #F1ECDA;
+  margin-bottom: 60px;
+  margin-left: 25px;
+}
+.main__what-you-text, .main__what-delegate-text {
+  font-size: 16px;
+  line-height: 24pz;
+  margin-bottom: 59px;
+  margin-left: 25px;
+}
+.main__what-bookkeeping-text, .main__what-tax-text {
+  font-size: 16px;
+  line-height: 24pz;
+  color: #F1ECDA;
+  margin-bottom: 59px;
+  margin-left: 25px;
+  align-items: start;
+}
+.main__what-you {
+  text-align: left;
+  align-content: end;
+  background: url("../assets/img/what/what-you.png") center/cover no-repeat;
+}
+.main__what-bookkeeping {
+  text-align: left;
+  align-content: end;
+  background: url("../assets/img/what/booking.png") center/cover no-repeat;
+}
+.main__what-delegate {
+  text-align: left;
+  align-content: end;
+  background: url("../assets/img/what/delegate.png") center/cover no-repeat;
+}
+.main__what-tax {
+  text-align: left;
+  align-content: end;
+  background: url("../assets/img/what/tax.png") center/cover no-repeat;
+}
+
+.relative {
+  position: relative;
+  padding-right: 10px;
+}
+
+.check-mark-menu-header {
+  position: relative;
+  display: inline-block;
+  padding-right: 20px; /* місце під галочку */
+  text-decoration: none;
+  color: #000;
+}
+
+.check-mark-menu-header::after {
+  position: absolute;
+  content: "";
+  top: 7px;
+  right: 0;
+  width: 9px;
+  height: 5px;
+  background: url("../assets/icon/check-mark/bird-link.png") center/contain no-repeat;
+}
+
+.check-mark-menu-header span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.check-mark-menu-header:hover span {
+  transform: scale(0.9);
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 320px;
+  }
+}/*# sourceMappingURL=main.css.map */
