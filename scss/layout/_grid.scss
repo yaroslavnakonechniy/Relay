@@ -28,12 +28,12 @@
 
 @include respond($bp-md){
       .container {
-            width: $container-sm;
+            width: 100%;
       }
 }
 
 @include respond($bp-sm){
       .container {
-            width: $container-xs;
+            width: 100%;
       }
 }
